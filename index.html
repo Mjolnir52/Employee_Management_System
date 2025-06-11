@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management Portal</h1>
+        
+        <div class="form-container">
+            <h2>Add/Edit Employee</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="employeeId">
+                
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <select id="department" required>
+                        <option value="">Select Department</option>
+                        <option value="HR">Human Resources</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="salary">Salary:</label>
+                    <input type="number" id="salary" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hireDate">Hire Date:</label>
+                    <input type="date" id="hireDate" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="saveBtn">Save Employee</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="employee-list-container">
+            <h2>Employee List</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search employees...">
+                <button id="searchBtn">Search</button>
+                <button id="resetSearchBtn">Reset</button>
+            </div>
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Position</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Employee data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
